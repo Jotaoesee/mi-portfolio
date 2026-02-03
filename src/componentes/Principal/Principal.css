@@ -1,0 +1,82 @@
+.seccion-principal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.cuadricula-animada {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  z-index: -1;
+}
+
+.titulo-hero {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  margin-bottom: 1rem;
+}
+
+.apellido-neon {
+  color: var(--color-acento-azul);
+  text-shadow: var(--neon-azul);
+}
+
+.subtitulo-hero {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--color-texto-secundario);
+  margin-bottom: 1.5rem;
+}
+
+.texto-degradado {
+  background: var(--degradado-principal);
+  -webkit-background-clip: text; 
+  background-clip: text;         
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.descripcion-hero {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+}
+
+.botones-accion {
+  display: flex;
+  gap: 1.5rem; 
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.boton-relleno {
+  background: var(--degradado-principal);
+  padding: 0.8rem 2rem;
+  border-radius: var(--radio-borde);
+  font-weight: bold;
+  transition: var(--transicion-suave);
+}
+
+.boton-linea {
+  border: 1px solid var(--color-acento-azul);
+  padding: 0.8rem 2rem;
+  border-radius: var(--radio-borde);
+  color: var(--color-acento-azul);
+  transition: var(--transicion-suave);
+}
+
+.boton-relleno:hover, .boton-linea:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-azul);
+}

@@ -1,12 +1,11 @@
 import Navegacion from './componentes/Navegacion/Navegacion';
+import Principal from './componentes/Principal/Principal';
 
 function App() {
   return (
     <div className="contenedor-aplicacion">
       <Navegacion />
-      <main style={{ marginTop: '100px', textAlign: 'center' }}>
-        <h2 className="texto-neon">contenido</h2>
-      </main>
+      <Principal />
     </div>
   );
 }
