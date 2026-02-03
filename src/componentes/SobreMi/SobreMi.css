@@ -1,0 +1,77 @@
+.seccion-sobre-mi {
+  padding: 100px 5%;
+  background-color: var(--color-fondo-secundario);
+  position: relative;
+}
+
+.contenedor-sobre-mi {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contenido-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.columna-biografia p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-texto-secundario);
+  margin-bottom: 1.5rem;
+}
+
+.columna-biografia strong {
+  color: var(--color-acento-azul);
+  font-weight: 600;
+}
+
+.columna-tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tarjeta-dato {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  transition: var(--transicion-suave);
+}
+
+.tarjeta-dato:hover {
+  transform: translateX(10px);
+  background: rgba(0, 212, 255, 0.05);
+  border-color: var(--color-acento-azul);
+  box-shadow: var(--neon-azul);
+}
+
+.etiqueta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-acento-azul);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.valor {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .contenido-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
