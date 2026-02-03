@@ -2,27 +2,38 @@ import './Principal.css';
 
 function Principal() {
   return (
-    <section id="inicio" className="seccion-principal">
-      <div className="cuadricula-fondo"></div>
-      
-      <div className="contenedor-contenido">
-        <h1 className="titulo-hero">
-          <span className="nombre">José Ángel</span> 
-          <span className="apellido"> Díaz Mulero</span>
-        </h1>
+    <section id="inicio" className="seccion-hero">
+      <div className="contenido-hero">
         
-        <h2 className="rol-profesional">
-          Desarrollador <span className="resaltado-gradiente">Full Stack</span>
-        </h2>
+        <div className="saludo-hero">
+          <span className="mano-animada">👋</span>
+          <span>Hola, soy</span>
+        </div>
         
-        <p className="breve-descripcion">
-          Técnico Superior en DAM especializado en .NET 8, C# y arquitecturas escalables. 
-          Apasionado por el código limpio y soluciones de alto impacto.
+        <h1 className="nombre-hero">José Ángel Díaz Mulero</h1>
+        
+        <p className="rol-hero">
+          Desarrollador Full Stack <span className="enfoque-rol">Backend-Focused</span>
         </p>
-        
-        <div className="botones-accion"> 
-          <a href="#proyectos" className="boton-relleno">Explorar Proyectos</a>
-          <a href="#sobre-mi" className="boton-linea">Sobre mí</a>
+
+        <p className="descripcion-hero">
+          Técnico Superior en DAM especializado en <strong>C#/.NET 8</strong> y <strong>SQL Server</strong>.
+          Me apasiona escribir código limpio y optimizar el rendimiento de los datos.
+        </p>
+
+        <div className="botones-hero">
+          <a href="#proyectos" className="boton-primario">Ver Proyectos</a>
+          <a href="#contacto" className="boton-secundario">Contactar</a>
+        </div>
+
+        <div className="tecnologias-hero">
+          <span>.NET 8</span>
+          <span className="separador">•</span>
+          <span>C#</span>
+          <span className="separador">•</span>
+          <span>React</span>
+          <span className="separador">•</span>
+          <span>SQL Server</span>
         </div>
       </div>
     </section>

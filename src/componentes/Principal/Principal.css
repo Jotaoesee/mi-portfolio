@@ -1,82 +1,151 @@
-.seccion-principal {
+.seccion-hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 80px 5%;
   position: relative;
-  text-align: center;
-  padding: 0 20px;
+  overflow: hidden;
 }
 
-.cuadricula-animada {
+.seccion-hero::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.titulo-hero {
-  font-size: clamp(2.5rem, 8vw, 5rem);
+.contenido-hero {
+  max-width: 800px;
+  text-align: center;
+  z-index: 1;
+}
+
+.saludo-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-texto-secundario);
+  animation: aparecer 0.8s ease;
 }
 
-.apellido-neon {
-  color: var(--color-acento-azul);
-  text-shadow: var(--neon-azul);
+.mano-animada {
+  display: inline-block;
+  animation: wave 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+  font-size: 2rem;
 }
 
-.subtitulo-hero {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(0deg); }
+}
+
+.nombre-hero {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: var(--degradado-principal);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aparecerSubiendo 0.8s ease 0.2s backwards;
+}
+
+.rol-hero {
+  font-size: 1.8rem;
   color: var(--color-texto-secundario);
   margin-bottom: 1.5rem;
+  animation: aparecerSubiendo 0.8s ease 0.4s backwards;
 }
 
-.texto-degradado {
-  background: var(--degradado-principal);
-  -webkit-background-clip: text; 
-  background-clip: text;         
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
+.enfoque-rol {
+  color: var(--color-acento-azul);
+  font-weight: 600;
 }
 
 .descripcion-hero {
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
   color: var(--color-texto-secundario);
-  line-height: 1.6;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  animation: aparecerSubiendo 0.8s ease 0.6s backwards;
 }
 
-.botones-accion {
+.botones-hero {
   display: flex;
-  gap: 1.5rem; 
+  gap: 1.5rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin-bottom: 3rem;
+  animation: aparecerSubiendo 0.8s ease 0.8s backwards;
 }
 
-.boton-relleno {
+.boton-primario, .boton-secundario {
+  padding: 1rem 2rem;
+  border-radius: var(--radio-borde);
+  font-weight: 700;
+  transition: var(--transicion-suave);
+  text-decoration: none;
+}
+
+.boton-primario {
   background: var(--degradado-principal);
-  padding: 0.8rem 2rem;
-  border-radius: var(--radio-borde);
-  font-weight: bold;
-  transition: var(--transicion-suave);
-}
-
-.boton-linea {
-  border: 1px solid var(--color-acento-azul);
-  padding: 0.8rem 2rem;
-  border-radius: var(--radio-borde);
-  color: var(--color-acento-azul);
-  transition: var(--transicion-suave);
-}
-
-.boton-relleno:hover, .boton-linea:hover {
-  transform: translateY(-5px);
+  color: white;
   box-shadow: var(--neon-azul);
+}
+
+.boton-secundario {
+  border: 2px solid var(--color-acento-azul);
+  color: var(--color-acento-azul);
+}
+
+.boton-primario:hover, .boton-secundario:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}
+
+.tecnologias-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--color-texto-secundario);
+  opacity: 0.7;
+  animation: aparecerSubiendo 0.8s ease 1s backwards;
+}
+
+.separador { color: var(--color-acento-azul); }
+
+/* ANIMACIONES */
+@keyframes aparecer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes aparecerSubiendo {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .botones-hero { flex-direction: column; align-items: center; }
+  .boton-primario, .boton-secundario { width: 100%; max-width: 300px; }
 }
