@@ -1,18 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
-  --color-bg: #0a0b10;
-  --color-text: #ffffff;
-}
+  /* Colores */
+  --color-fondo-principal: #0a0b10;
+  --color-fondo-secundario: #161b22;
+  --color-acento-azul: #00d4ff;
+  --color-acento-morado: #9d00ff;
+  --color-texto-principal: #ffffff;
+  --color-texto-secundario: #8b949e;
 
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  /* Efectos */
+  --neon-azul: 0 0 10px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.3);
+  --degradado-principal: linear-gradient(135deg, var(--color-acento-azul), var(--color-acento-morado));
+
+  /* Dimensiones */
+  --espaciado-xl: 4rem;
+  --radio-borde: 12px;
+  --transicion-suave: all 0.3s ease;
 }
