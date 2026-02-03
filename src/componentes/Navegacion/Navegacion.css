@@ -1,0 +1,48 @@
+.navegacion-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--color-fondo-principal); 
+  position: fixed;
+  top: 0;
+  left: 0;        
+  right: 0;       
+  width: 100%;   
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.texto-neon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-acento-azul);
+  text-shadow: var(--neon-azul);
+}
+
+.enlaces-navegacion {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.enlaces-navegacion a {
+  text-decoration: none;
+  color: var(--color-texto-secundario);
+  transition: var(--transicion-suave);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.enlaces-navegacion a:hover {
+  color: var(--color-acento-azul);
+}
+
+.boton-contacto {
+  border: 1px solid var(--color-acento-azul);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--neon-azul);
+}
