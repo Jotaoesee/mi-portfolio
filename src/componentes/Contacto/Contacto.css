@@ -1,0 +1,95 @@
+.seccion-contacto {
+  padding: 100px 5%;
+  background-color: var(--color-fondo-secundario);
+}
+
+.contenedor-contacto {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.info-contacto h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-acento-azul);
+}
+
+.info-contacto p {
+  color: var(--color-texto-secundario);
+  margin-bottom: 2rem;
+}
+
+.item-contacto {
+  margin-bottom: 1.5rem;
+}
+
+.item-contacto strong {
+  color: var(--color-texto-principal);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 2rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  color: var(--color-texto-secundario);
+}
+
+.campo input, .campo textarea {
+  padding: 0.8rem;
+  background: var(--color-fondo-principal);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  transition: var(--transicion-suave);
+}
+
+.campo input:focus, .campo textarea:focus {
+  border-color: var(--color-acento-azul);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
+}
+
+.boton-enviar {
+  background: var(--degradado-principal);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radio-borde);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transicion-suave);
+}
+
+.boton-enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--neon-azul);
+}
+
+@media (max-width: 768px) {
+  .grid-contacto {
+    grid-template-columns: 1fr;
+  }
+}

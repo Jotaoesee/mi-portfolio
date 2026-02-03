@@ -2,6 +2,7 @@ import Navegacion from './componentes/Navegacion/Navegacion';
 import Principal from './componentes/Principal/Principal';
 import SobreMi from './componentes/SobreMi/SobreMi';
 import Proyectos from './componentes/Proyectos/Proyectos';
+import Contacto from './componentes/Contacto/Contacto';
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
         <Principal />
         <SobreMi />
         <Proyectos />
+        <Contacto /> 
       </main>
     </div>
   );
 }
 
-export default App; 
+export default App;
