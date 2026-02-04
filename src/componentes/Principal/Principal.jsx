@@ -22,7 +22,7 @@ function Principal() {
         </p>
 
         <div className="botones-hero">
-          <a href="#proyectos" className="boton-primario">Ver Proyectos</a>
+          <a href="#proyectos" className="boton-secundario">Ver Proyectos</a>
           <a href="#contacto" className="boton-secundario">Contactar</a>
         </div>
 

@@ -1,108 +1,131 @@
 .seccion-contacto {
   padding: 100px 5%;
-  background-color: var(--color-fondo-principal); 
+  background-color: var(--color-fondo-principal);
 }
 
 .contenedor-contacto {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .titulo-seccion {
   text-align: center;
   margin-bottom: 60px;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
   color: white;
+}
+
+.titulo-seccion .texto-degradado {
+  background: var(--degradado-principal) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline-block;
 }
 
 .grid-contacto {
   display: grid;
-  grid-template-columns: 400px 1fr; 
+  grid-template-columns: 380px 1fr;
   gap: 50px;
   align-items: start;
 }
 
-.columna-izquierda {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
+/* --- COLUMNA IZQUIERDA --- */
 .bloque-info h3 {
-  color: #00d4ff;
+  color: var(--color-acento-azul);
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
 .bloque-info p {
-  color: #a0a8c1;
+  color: var(--color-texto-secundario);
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
+.lista-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .tarjeta-dato {
-  background: #161b33;
+  background: var(--color-fondo-secundario);
   padding: 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: var(--radio-borde);
+  border: 1px solid rgba(255, 255, 255, 0.05); 
   display: flex;
   align-items: center;
   gap: 15px;
-  transition: transform 0.3s ease;
+  transition: var(--transicion-suave);
+  cursor: default;
 }
 
-.tarjeta-dato:hover { transform: translateX(10px); }
+.tarjeta-dato:hover {
+  transform: translateX(10px);
+  border-color: var(--color-acento-azul);
+  box-shadow: var(--neon-azul);
+}
 
+.enlace-contacto {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; 
+}
+
+/* --- FORMULARIO (COLUMNA DERECHA) --- */
 .formulario-card {
-  background: #161b33;
+  background: var(--color-fondo-secundario);
   padding: 40px;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: var(--radio-borde);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .campo {
   display: flex;
-  flex-direction: column; 
-  gap: 8px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .campo label {
   color: white;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-.campo input, .campo textarea {
-  background: #0a0e1a;
+.campo input,
+.campo textarea {
+  background: var(--color-fondo-principal);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 15px;
   color: white;
-  width: 100%;
+  transition: var(--transicion-suave);
+  font-family: inherit;
+  font-size: 1rem;
 }
 
-.boton-degradado {
-  width: 100%;
-  padding: 15px;
-  background: linear-gradient(90deg, #00d4ff 0%, #0072ff 100%);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-acento-azul);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.1);
+  background: rgba(0, 212, 255, 0.02);
 }
 
-.boton-degradado:hover {
-  filter: brightness(1.2);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+/* --- AJUSTE DEL BOTÓN GLOBAL EN EL FORMULARIO --- */
+.formulario-card .boton-secundario {
+  width: 100%; 
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 900px) {
   .grid-contacto {
     grid-template-columns: 1fr;
-  }
-  .columna-izquierda {
-    max-width: 100%;
   }
 }

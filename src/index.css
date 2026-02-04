@@ -33,6 +33,37 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* --- ESTILOS DE BOTONES GLOBALES --- */
+
+.boton-secundario {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: var(--radio-borde);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transicion-suave);
+  
+  /* Estilo base: Borde cian y fondo transparente */
+  border: 2px solid var(--color-acento-azul);
+  color: var(--color-acento-azul);
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+.boton-secundario:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 212, 255, 0.05); 
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+  filter: brightness(1.2);
+}
+
+.boton-secundario:active {
+  transform: translateY(0);
+}
+
+/* --- FIN BOTONES --- */
+
 a {
   text-decoration: none;
   color: inherit;
