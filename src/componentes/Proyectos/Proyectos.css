@@ -13,12 +13,30 @@
   margin-bottom: 80px; 
 }
 
+/* --- TÍTULO UNIFICADO --- */
+.titulo-seccion {
+  font-size: clamp(2.5rem, 6vw, 4rem); 
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.texto-degradado {
+  background: var(--degradado-principal) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline-block;
+  white-space: nowrap; 
+}
+
 .subtitulo-seccion {
-  color: #a0a8c1;
+  color: var(--color-texto-secundario);
   margin-top: 15px;
   font-size: 1.1rem;
 }
 
+/* --- TARJETAS --- */
 .rejilla-proyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -26,20 +44,20 @@
 }
 
 .tarjeta-proyecto {
-  background: #161b33; 
+  background: var(--color-fondo-secundario); 
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.4s ease;
+  transition: var(--transicion-suave);
 }
 
 .tarjeta-proyecto:hover {
   transform: translateY(-10px);
-  border-color: #00d4ff;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-color: var(--color-acento-azul);
+  box-shadow: var(--neon-azul);
 }
 
 .titulo-proyecto {
@@ -49,7 +67,7 @@
 }
 
 .descripcion-proyecto {
-  color: #a0a8c1;
+  color: var(--color-texto-secundario);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -62,7 +80,7 @@
 
 .etiqueta-tech {
   background: rgba(0, 212, 255, 0.1);
-  color: #00d4ff;
+  color: var(--color-acento-azul);
   padding: 0.4rem 1rem;
   border-radius: 8px;
   font-size: 0.8rem;
@@ -71,7 +89,7 @@
 }
 
 .enlace-proyecto {
-  color: #00d4ff;
+  color: var(--color-acento-azul);
   text-decoration: none;
   font-weight: 700;
   display: flex;
@@ -88,16 +106,8 @@
   transform: translateX(5px);
 }
 
-.titulo-seccion {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  color: #ffffff; 
-}
-
-.texto-degradado {
-  background: linear-gradient(90deg, #00d4ff 0%, #0072ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block; 
+@media (max-width: 768px) {
+  .rejilla-proyectos {
+    grid-template-columns: 1fr;
+  }
 }

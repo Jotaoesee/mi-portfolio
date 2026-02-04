@@ -20,7 +20,9 @@ function Proyectos() {
     <section id="proyectos" className="seccion-proyectos">
       <div className="contenedor-proyectos">
         <header className="cabecera-proyectos">
-          <h2 className="titulo-seccion">Mis <span className="texto-degradado">Proyectos</span></h2>
+          <h2 className="titulo-seccion">
+            <span className="texto-degradado">Mis Proyectos</span>
+          </h2>
           <p className="subtitulo-seccion">Soluciones técnicas enfocadas en rendimiento y escalabilidad</p>
         </header>
         
