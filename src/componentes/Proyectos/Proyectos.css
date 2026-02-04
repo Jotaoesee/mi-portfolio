@@ -1,6 +1,7 @@
+/* --- SECCIÓN PRINCIPAL --- */
 .seccion-proyectos {
-  padding: 100px 5%;
-  background-color: var(--color-fondo-principal); 
+  padding: 80px 5%; 
+  background-color: var(--color-fondo-principal);
 }
 
 .contenedor-proyectos {
@@ -10,12 +11,12 @@
 
 .cabecera-proyectos {
   text-align: center;
-  margin-bottom: 80px; 
+  margin-bottom: 60px; 
 }
 
-/* --- TÍTULO UNIFICADO --- */
+/* --- TÍTULO SECCIÓN --- */
 .titulo-seccion {
-  font-size: clamp(2.5rem, 6vw, 4rem); 
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 1rem;
 }
@@ -27,87 +28,142 @@
   -webkit-text-fill-color: transparent !important;
   color: transparent !important;
   display: inline-block;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .subtitulo-seccion {
-  color: var(--color-texto-secundario);
-  margin-top: 15px;
-  font-size: 1.1rem;
+  color:  var(--color-acento-azul);
+  font-size: 1.5rem;
+  opacity: 0.8;
 }
 
-/* --- TARJETAS --- */
+/* --- GRID DE TARJETAS (Fuerza 3 columnas en Desktop) --- */
 .rejilla-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem; 
 }
 
 .tarjeta-proyecto {
-  background: var(--color-fondo-secundario); 
+  background: var(--color-fondo-secundario);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 2.5rem;
+  border-radius: 12px; 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%; 
   transition: var(--transicion-suave);
 }
 
-.tarjeta-proyecto:hover {
-  transform: translateY(-10px);
-  border-color: var(--color-acento-azul);
-  box-shadow: var(--neon-azul);
+/* --- CABECERA VISUAL --- */
+.visual-proyecto {
+  height: 150px; 
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px; 
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.icono-grande {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.2));
+  transition: var(--transicion-suave);
+}
+
+/* --- CONTENIDO --- */
+.contenido-proyecto {
+  padding: 0 1.2rem 1.2rem 1.2rem; 
+  flex-grow: 1;
 }
 
 .titulo-proyecto {
   color: #ffffff;
-  font-size: 1.5rem;
-  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
 .descripcion-proyecto {
   color: var(--color-texto-secundario);
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  font-size: 0.85rem; 
 }
 
+/* --- ETIQUETAS CÁPSULA --- */
 .etiquetas-tecnologias {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.4rem;
 }
 
 .etiqueta-tech {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(0, 212, 255, 0.05);
   color: var(--color-acento-azul);
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+/* --- PIE DE TARJETA --- */
+.pie-proyecto {
+  padding: 1rem 1.2rem;
+  display: flex;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.enlace-icono {
+  text-decoration: none;
+  color: var(--color-texto-secundario);
   font-size: 0.8rem;
   font-weight: 600;
-  border: 1px solid rgba(0, 212, 255, 0.2);
-}
-
-.enlace-proyecto {
-  color: var(--color-acento-azul);
-  text-decoration: none;
-  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 2rem;
+  gap: 6px;
+  transition: var(--transicion-suave);
 }
 
-.enlace-proyecto span {
-  transition: transform 0.3s ease;
+.enlace-icono:hover {
+  color: var(--color-acento-azul);
+  transform: translateY(-2px);
 }
 
-.enlace-proyecto:hover span {
-  transform: translateX(5px);
+/* --- HOVER GLOBAL --- */
+.tarjeta-proyecto:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-acento-azul);
+  box-shadow: var(--neon-azul);
 }
 
-@media (max-width: 768px) {
+.svg-icono {
+  width: 18px;           
+  height: 18px;
+  fill: currentColor;    
+  transition: var(--transicion-suave);
+}
+
+.enlace-icono:hover .svg-icono {
+  filter: drop-shadow(0 0 5px var(--color-acento-azul));
+  color: var(--color-acento-azul);
+}
+
+/* --- MEDIA QUERIES (Ajuste de columnas) --- */
+@media (max-width: 1024px) {
   .rejilla-proyectos {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 650px) {
+  .rejilla-proyectos {
+    grid-template-columns: 1fr; 
+    max-width: 350px;
+    margin: 0 auto;
   }
 }

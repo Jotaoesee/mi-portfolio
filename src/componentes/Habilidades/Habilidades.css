@@ -8,68 +8,89 @@
   margin-bottom: 60px;
 }
 
+/* --- TÍTULO --- */
 .titulo-stack {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.texto-brillo {
-  color: #00d4ff;
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  margin-bottom: 10px;
+  text-align: center;
+  background: var(--degradado-principal);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  color: transparent;
+  display: inline-block; 
 }
 
 .subtitulo-stack {
-  color: #a0a8c1;
+  color: var(--color-acento-azul);
   margin-top: 10px;
+  font-size: 1.1rem;
 }
 
+/* --- REJILLA --- */
 .rejilla-skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 40px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px; 
+  max-width: 900px;
   margin: 0 auto;
 }
 
+/* --- LA TARJETA (ESTILO CAJA) --- */
 .tarjeta-skill {
+  background: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.08); 
+  border-radius: 12px;
+  padding: 30px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 15px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
 }
 
+/* --- EFECTO HOVER (Brillo azul neón) --- */
 .tarjeta-skill:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  background: rgba(0, 212, 255, 0.02);
+  border-color: var(--color-acento-azul);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
 }
 
+/* --- EL ICONO --- */
 .contenedor-icono {
-  width: 80px;
-  height: 80px;
-  background: #161b33;
-  border-radius: 18px;
+  width: 50px; 
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  position: relative;
-  overflow: hidden;
+  font-size: 2.2rem; 
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-skill:hover .contenedor-icono {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px var(--color-acento-azul));
 }
 
 .nombre-skill {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.95rem;
+  color: #a0a8c1; 
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
 }
 
-/* RESPONSIVE */
+.tarjeta-skill:hover .nombre-skill {
+  color: #ffffff;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 600px) {
   .rejilla-skills {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
   }
 }
