@@ -4,6 +4,7 @@ import SobreMi from './componentes/SobreMi/SobreMi';
 import Proyectos from './componentes/Proyectos/Proyectos';
 import Contacto from './componentes/Contacto/Contacto';
 import Footer from './componentes/Footer/Footer';
+import Habilidades from './componentes/Habilidades/Habilidades';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Principal />
         <SobreMi />
         <Proyectos />
+        <Habilidades />
         <Contacto /> 
         <Footer />
       </main>

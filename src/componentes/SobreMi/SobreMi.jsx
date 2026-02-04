@@ -4,12 +4,16 @@ function SobreMi() {
   return (
     <section id="sobre-mi" className="seccion-sobre-mi">
       <div className="contenedor-sobre-mi">
-        <h2 className="titulo-seccion">Sobre <span className="texto-degradado">Mí</span></h2>
+        <h2 className="titulo-seccion">
+          <span className="texto-degradado">Sobre Mí</span>
+        </h2>
         
         <div className="contenido-grid">
           <div className="columna-biografia">
             <p>
-              Aqui ira mi informacion
+              Soy <strong>José Ángel</strong>, un desarrollador enfocado en soluciones 
+              robustas con <strong>.NET</strong> y <strong>React</strong>. Mi objetivo 
+              es crear aplicaciones escalables y eficientes.
             </p>
           </div>
 

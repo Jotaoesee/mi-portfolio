@@ -1,6 +1,6 @@
 .seccion-sobre-mi {
   padding: 100px 5%;
-  background-color: var(--color-fondo-secundario);
+  background-color: var(--color-fondo-principal); 
   position: relative;
 }
 
@@ -10,9 +10,21 @@
 }
 
 .titulo-seccion {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 6vw, 4rem); 
   text-align: center;
   margin-bottom: 4rem;
+  font-weight: 800;
+}
+
+.titulo-seccion .texto-degradado {
+  background: var(--degradado-principal) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline-block;
+  letter-spacing: -1px;
+  width: 100%; 
 }
 
 .contenido-grid {
@@ -30,7 +42,7 @@
 }
 
 .columna-biografia strong {
-  color: var(--color-acento-azul);
+  color: var(--color-acento-azul); 
   font-weight: 600;
 }
 
@@ -41,7 +53,7 @@
 }
 
 .tarjeta-dato {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--color-fondo-secundario); 
   padding: 1.5rem;
   border-radius: var(--radio-borde);
   border: 1px solid rgba(0, 212, 255, 0.1);
@@ -50,9 +62,8 @@
 
 .tarjeta-dato:hover {
   transform: translateX(10px);
-  background: rgba(0, 212, 255, 0.05);
   border-color: var(--color-acento-azul);
-  box-shadow: var(--neon-azul);
+  box-shadow: var(--neon-azul); 
 }
 
 .etiqueta {
@@ -67,6 +78,7 @@
 .valor {
   font-size: 1.2rem;
   font-weight: bold;
+  color: white;
 }
 
 @media (max-width: 768px) {
