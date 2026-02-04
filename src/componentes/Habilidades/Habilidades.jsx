@@ -18,7 +18,7 @@ function Habilidades() {
     <section id="habilidades" className="seccion-habilidades">
       <div className="contenedor-habilidades">
         <header className="cabecera-habilidades">
-          <h2 className="titulo-stack">Tech <span className="texto-brillo">Stack</span></h2>
+          <h2 className="titulo-stack">Tech Stack</h2>
           <p className="subtitulo-stack">Tecnologías con las que trabajo día a día</p>
         </header>
 

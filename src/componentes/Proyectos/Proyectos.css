@@ -1,6 +1,6 @@
 .seccion-proyectos {
   padding: 100px 5%;
-  background-color: rgba(10, 11, 16, 0.8); 
+  background-color: var(--color-fondo-principal); 
 }
 
 .contenedor-proyectos {
