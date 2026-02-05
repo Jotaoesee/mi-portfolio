@@ -5,17 +5,20 @@ import Proyectos from './componentes/Proyectos/Proyectos';
 import Contacto from './componentes/Contacto/Contacto';
 import Footer from './componentes/Footer/Footer';
 import Habilidades from './componentes/Habilidades/Habilidades';
+import BotonScroll from './componentes/BotonScroll/BotonScroll';
 
 function App() {
   return (
     <div className="contenedor-aplicacion">
       <Navegacion />
+      <BotonScroll />      
+      
       <main>
         <Principal />
         <SobreMi />
         <Proyectos />
         <Habilidades />
-        <Contacto /> 
+        <Contacto />
         <Footer />
       </main>
     </div>

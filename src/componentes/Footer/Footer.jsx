@@ -20,6 +20,7 @@ function Footer() {
               <ul className="lista-footer">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
               </ul>
@@ -38,9 +39,9 @@ function Footer() {
             <div className="columna-footer">
               <h4 className="titulo-columna">Conecta</h4>
               <ul className="lista-footer">
-                <li><a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="mailto:tu@email.com">Email</a></li>
+                <li><a href="https://github.com/Jotaoesee" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/jose-angel-diaz-dev/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="mailto:jadiazm1995@gmail.com">Email</a></li>
               </ul>
             </div>
           </div>
