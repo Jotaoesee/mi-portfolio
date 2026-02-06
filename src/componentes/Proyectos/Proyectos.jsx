@@ -3,16 +3,23 @@ import './Proyectos.css';
 function Proyectos() {
   const listaProyectos = [
     {
-      titulo: "Realidad Impresa 3D",
-      descripcion: "Plataforma integral para la gestión de impresiones 3D personalizadas, con sistema de pedidos y seguimiento en tiempo real.",
-      tecnologias: [".NET 8", "C#", "SQL Server", "React"],
-      enlace: "#",
-      icono: "🧊" 
+      titulo: "MenteViva",
+      descripcion: "App móvil multiplataforma para estimulación cognitiva en pacientes con demencia senil. Alta accesibilidad y sincronización en tiempo real con Firebase[cite: 24, 25].",
+      tecnologias: ["Flutter", "Dart", "Firebase", "Kotlin"],
+      enlace: "https://github.com/Jotaoesee",
+      icono: "🧠"
     },
     {
-      titulo: "Gestión de Datos ETL",
-      descripcion: "Desarrollo de procesos de automatización y transformación de datos a gran escala para optimización de procesos empresariales.",
-      tecnologias: [".NET", "EF Core", "SQL Server"],
+      titulo: "API E-Commerce & IA",
+      descripcion: "Backend escalable con integración de pagos (Stripe) y conectividad con IA (Deepseek). Desplegado con Docker para máxima consistencia[cite: 31, 32, 33].",
+      tecnologias: ["Python", "Django", "Docker", "MySQL", "IA"],
+      enlace: "https://github.com/Jotaoesee",
+      icono: "🛒"
+    },
+    {
+      titulo: "Arquitecturas ETL & Scraping",
+      descripcion: "Sistemas de automatización de datos y extracción de información crítica, optimizando el rendimiento en entornos de producción[cite: 10, 11].",
+      tecnologias: [".NET 8", "C#", "SQL Server", "Web Scraping"],
       enlace: "#",
       icono: "📊"
     }

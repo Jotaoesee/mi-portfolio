@@ -2,35 +2,64 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  color: white;
-  border: none;
+  width: 55px;
+  height: 55px;
+  background: var(--color-fondo-secundario);
+  color: var(--color-acento-azul);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: 50%;
   cursor: pointer;
-  z-index: 99999;
-  font-size: 24px;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
-  
-  /* Alineación */
+  z-index: 9999;
   display: flex;
+  align-items: center;
   justify-content: center;
   
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.5);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  transform: scale(0.8) translateY(20px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .boton-scroll.show {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
+  transform: scale(1) translateY(0);
 }
 
 .boton-scroll:hover {
-  transform: scale(1.1) translateY(-5px);
-  filter: brightness(1.1);
+  transform: translateY(-5px);
+  border-color: var(--color-acento-azul);
+  box-shadow: var(--neon-azul);
+  color: white; 
+}
+
+/* Círculo de progreso */
+.circulo-progreso {
+  position: absolute;
+  width: 110%; 
+  height: 110%;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.circulo-fondo {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.03); 
+  stroke-width: 2;
+}
+
+.circulo-barra {
+  fill: none;
+  stroke: var(--color-acento-azul);
+  stroke-width: 3; 
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+  filter: drop-shadow(0 0 2px var(--color-acento-azul));
+}
+
+/* Icono de flecha */
+.icono-flecha {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }

@@ -17,8 +17,9 @@ function Principal() {
         </p>
 
         <p className="descripcion-hero">
-          Técnico Superior en DAM especializado en <strong>C#/.NET 8</strong> y <strong>SQL Server</strong>.
-          Me apasiona escribir código limpio y optimizar el rendimiento de los datos.
+          Desarrollador Full Stack con experiencia en <strong>consultoría de software</strong>. 
+          Especializado en el ecosistema <strong>.NET 8</strong>, arquitecturas <strong>ETL</strong>y soluciones 
+          escalables con <strong>SQL Server</strong>.
         </p>
 
         <div className="botones-hero">

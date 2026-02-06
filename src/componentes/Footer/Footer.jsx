@@ -51,11 +51,6 @@ function Footer() {
           <p className="copyright-footer">
             © {anioActual} José Ángel Díaz Mulero. Hecho con React + Vite
           </p>
-          <div className="tecnologias-footer">
-            <span className="placa-tech">React</span>
-            <span className="placa-tech">Vite</span>
-            <span className="placa-tech">.NET 8</span>
-          </div>
         </div>
       </div>
     </footer>
